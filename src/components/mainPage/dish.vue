@@ -82,7 +82,9 @@ export default {
     showDetail: function () {
       console.log('getDishDetail')
       console.log(this.item.dishid)
-      axios.get('http://localhost:5000/dish/' + this.item.dishid)
+      // var url = 'http://localhost:5000/dish/'
+      var url = this.$store.state.baseApi + '/dish/'
+      axios.get(url + this.item.dishid)
         .then((response) => {
           console.log('get dish detail success')
           console.log(response.data)

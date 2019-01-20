@@ -80,7 +80,9 @@ export default {
       })
     },
     pay () {
-      axios.post('http://localhost:5000/order/' + this.$store.state.orderId + '/payment', {
+      // var url = 'http://localhost:5000/order/' + this.$store.state.orderId + '/payment'
+      var url = this.$store.state.baseApi + '/order/' + this.$store.state.orderId + '/payment'
+      axios.post(url, {
         price: this.$store.state.totalPrice})
         .then((response) => {
           console.log('post order success')

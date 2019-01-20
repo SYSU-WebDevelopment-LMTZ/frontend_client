@@ -31,7 +31,9 @@ export default {
   methods: {
     getDishes () {
       console.log('getDishes')
-      axios.get('http://localhost:5000/dish/')
+      // var url = 'http://localhost:5000/dish/'
+      var url = this.$store.state.baseApi + '/dish/'
+      axios.get(url)
         .then((response) => {
           console.log('get success')
           console.log(response.data)

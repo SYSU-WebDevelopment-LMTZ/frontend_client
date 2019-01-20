@@ -48,7 +48,9 @@ export default {
           dishes: allDishes,
           note: 'this is a note'
         }
-        axios.post('http://localhost:5000/order/', data)
+        // url = 'http://localhost:5000/order/'
+        var url = this.$store.state.baseApi + '/order/'
+        axios.post(url, data)
           .then((response) => {
             console.log('post order success')
             console.log(response.data)

@@ -4,6 +4,8 @@ Vue.use(vuex)
 /* eslint-disable */
 export default new vuex.Store({
     state:{
+      /* baseApi: 'http://localhost:5000/', */
+      baseApi: 'http://192.168.43.90:81/',
       storeName: '至善坊',
       orderId: 0,
       totalPrice: 0,
